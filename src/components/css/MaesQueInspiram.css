@@ -1,0 +1,65 @@
+/* Card geral */
+.maes-que-inspiram-card {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Contêiner do card */
+  .maes-que-inspiram-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  .texto-container {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .texto-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .texto-container p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .imagem-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .imagem-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .maes-que-inspiram-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .texto-container {
+      padding-right: 0;
+    }
+  
+    .imagem-container img {
+      max-width: 90%;
+    }
+  }
+  

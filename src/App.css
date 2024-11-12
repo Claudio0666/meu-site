@@ -1,0 +1,38 @@
+/* Estilos globais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  padding-top: 80px; /* Espaço para acomodar a navbar fixa */
+  background-image: url('/src/imagem/back.webp'); /* Imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Torna a imagem fixa enquanto o conteúdo rola */
+  color: #2f3e50; /* Texto primário em cinza escuro */
+  min-height: 100vh; /* Garante que a altura mínima da tela seja 100% */
+  position: center; /* Garantir que o fundo fique atrás de todos os elementos */
+  z-index: -1; /* Coloca o fundo abaixo de todos os outros elementos */
+}
+
+/* Garantir que o conteúdo da aplicação tenha uma camada superior */
+.app-container {
+  position: relative;
+  z-index: 1; /* Garante que o conteúdo tenha uma camada superior */
+}
+
+/* Outras alterações podem ser necessárias para garantir que o fundo não interfira no layout */
+.content {
+  position: relative;
+  z-index: 2; /* Garante que o conteúdo tenha prioridade de visibilidade */
+}
+
+
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Estilos do botão de logoff */
+

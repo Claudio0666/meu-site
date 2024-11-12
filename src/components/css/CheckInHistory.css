@@ -1,0 +1,99 @@
+/* Estilos principais */
+.check-in-history {
+  padding: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo branca com 80% de opacidade */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 0.6s ease-in-out; /* Animação ao carregar */
+}
+
+.check-in-history:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #4CAF50;
+}
+
+/* Estilos da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: #f1f3f5;
+  color: #555;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+tr:hover {
+  background-color: #e2e6ea;
+  cursor: pointer;
+}
+
+/* Estilo de mensagens */
+p {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.error {
+  color: #e63946;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+  margin-top: 20px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Adicionando um efeito de transição para a tabela */
+.check-in-table th, .check-in-table td {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.check-in-table th:hover, .check-in-table td:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}

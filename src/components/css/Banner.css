@@ -1,0 +1,64 @@
+/* src/css/Banner.css */
+.sobre-banner {
+    position: relative; /* Necessário para o pseudo-elemento */
+    background-image: url('/src/imagem/34.webp'); /* Insira o caminho da sua imagem */
+    background-size: cover; /* Cobre todo o espaço do banner */
+    background-position: center; /* Centraliza a imagem */
+    height: 300px; /* Altura do banner */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    color: #ffffff; /* Texto em branco (aplica-se ao conteúdo que não tem cor definida) */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    margin-bottom: 20px; /* Espaçamento abaixo do banner */
+}
+
+.banner::before {
+    content: ''; /* Necessário para exibir o pseudo-elemento */
+    position: absolute; /* Posição absoluta para sobreposição */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha ao fundo */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade para a sobreposição */
+    border-radius: 10px; /* Manter os cantos arredondados */
+    z-index: 1; /* Coloca a sobreposição abaixo do conteúdo */
+}
+
+.banner-text {
+    font-size: 2.5em; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    color: #ffffff; /* Garante que o texto do título seja branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para destaque */
+    margin: 0; /* Remove margens */
+    z-index: 2; /* Coloca o texto acima da sobreposição */
+    position: relative; /* Necessário para que o z-index funcione */
+}
+
+.banner-subtext {
+    font-size: 1.2em; /* Tamanho da fonte da descrição */
+    margin-top: 10px; /* Espaço acima da descrição */
+    color: #ffffff; /* Garante que o texto da subdescrição seja branco */
+    opacity: 0.9; /* Um pouco de transparência */
+    z-index: 2; /* Coloca a subdescrição acima da sobreposição */
+    position: relative; /* Necessário para que o z-index funcione */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner {
+        height: 200px; /* Altura menor em telas menores */
+    }
+
+    .banner-text {
+        font-size: 2em; /* Reduz tamanho do texto em telas menores */
+    }
+
+    .banner-subtext {
+        font-size: 1em; /* Reduz a descrição */
+    }
+}

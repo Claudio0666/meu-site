@@ -1,0 +1,79 @@
+/* Estilo geral para o container */
+.sobre-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+/* Estilo para o card semi-transparente */
+.sobre-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar o card */
+  margin: 20px auto;
+  max-width: 800px;
+  animation: fadeIn 0.6s ease-in-out; /* Animação ao carregar */
+}
+
+/* Estilo para o conteúdo */
+.sobre-conteudo {
+  text-align: justify;
+  padding: 0 20px;
+}
+
+/* Estilo para os parágrafos de texto */
+.sobre-texto {
+  font-size: 1.2em;
+  margin-bottom: 1.1em;
+  color: #444;
+  word-wrap: break-word;
+}
+
+/* Estilo para o botão de doação */
+.doacao-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #4caf50;
+  border-radius: 8px;
+}
+
+.doacao-texto {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.doacao-button {
+  background-color: #39a93d;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.doacao-button:hover {
+  background-color: #388E3C;
+}
+
+@media (max-width: 768px) {
+  .sobre-card {
+    padding: 15px;
+  }
+  
+  .sobre-texto {
+    font-size: 1.1em;
+  }
+  
+  .doacao-button {
+    width: 100%;
+    font-size: 1.2em;
+  }
+}

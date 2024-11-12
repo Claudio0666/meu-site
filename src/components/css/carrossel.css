@@ -1,0 +1,106 @@
+.carousel-container {
+  width: 100%; /* Ajuste a largura para caber a imagem completa */
+  max-width: 2000px; /* Definido para acomodar imagens maiores */
+  height: 670px; /* Altura fixa para corresponder à imagem */
+  margin: auto;
+  position: relative;
+  overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse as bordas */
+}
+
+.carousel-item {
+  position: relative; /* Necessário para posicionar o conteúdo sobre a imagem */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%; /* Ajusta a imagem para ocupar a altura total */
+  object-fit: cover; /* Mantém a proporção e preenche o contêiner */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  border-radius: 10px; /* Bordas arredondadas, se desejado */
+}
+
+/* Sobreposição da imagem */
+.carousel-image::before {
+  content: ''; /* Necessário para exibir o pseudo-elemento */
+  position: absolute; /* Posição absoluta para sobreposição */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha ao fundo */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade para a sobreposição */
+  border-radius: 10px; /* Manter os cantos arredondados */
+  z-index: 1; /* Coloca a sobreposição abaixo do conteúdo */
+  transition: background-color 0.3s; /* Transição suave para a sobreposição */
+}
+
+/* Estilo para o texto e o botão sobreposto */
+.carousel-content {
+  position: absolute; /* Posiciona o conteúdo sobre a imagem */
+  bottom: 20px; /* Distância do fundo */
+  left: 20px; /* Distância da esquerda */
+  color: white;
+  z-index: 2; /* Garante que o conteúdo fique acima da imagem */
+}
+
+.carousel-content h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.carousel-content p {
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.carousel-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(76, 175, 80, 0.8); /* Cor de fundo verde com opacidade */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 3; /* Garante que o botão fique acima de outros elementos */
+  transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.carousel-button:hover {
+  background-color: rgba(76, 175, 80, 1); /* Cor ao passar o mouse */
+}
+
+.slick-prev, .slick-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slick-prev {
+  left: 20px; /* Ajusta a posição do botão anterior */
+  z-index: 1;
+}
+
+.slick-next {
+  right: 20px; /* Ajusta a posição do botão próximo */
+  z-index: 1;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+}

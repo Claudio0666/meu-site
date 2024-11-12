@@ -1,0 +1,156 @@
+/* Variáveis CSS para facilitar manutenção */
+:root {
+  --primary-color: #4caf50;
+  --primary-dark: #388E3C;
+  --bg-color: rgba(255, 255, 255, 0.8); /* Card semi-transparente */
+  --text-color: #333;
+  --heading-font-size: 1.2rem;
+  --body-font-size: 1rem;
+  --max-width: 1200px;
+  --card-radius: 12px;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo geral para o container principal */
+.about-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  animation: fadeIn 0.6s ease-in-out; /* Animação ao carregar */
+}
+
+/* Estilo para a seção (card semi-transparente) */
+.about-section {
+  background-color: var(--bg-color);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  margin: 1.5rem auto;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+  transform: scale(1.02); /* Leve aumento ao passar o mouse */
+}
+
+/* Estilo para o conteúdo */
+.content {
+  text-align: justify;
+  padding: 0 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Estilo para o texto introdutório */
+.intro-text {
+  font-size: var(--heading-font-size);
+  color: #444;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Estilo para os botões de seção */
+.about-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateX(5px) scale(1.05); /* Leve deslocamento e aumento ao passar o mouse */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.about-button:active {
+  transform: scale(0.98); /* Reduz um pouco o tamanho ao clicar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra mais sutil ao clicar */
+}
+
+/* Estilo responsivo para dispositivos menores */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 1rem;
+  }
+
+  .intro-text, .content p {
+    font-size: var(--body-font-size);
+  }
+
+  .about-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Adicionando animação para o conteúdo */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  text-align: justify;
+  padding: 0 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  animation: fadeIn 0.5s ease-out; /* Animação para o card */
+  opacity: 0; /* Inicialmente invisível */
+}
+
+.section.active .content {
+  opacity: 1; /* Mostra o conteúdo quando a seção está ativa */
+}
+
+.section {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out; /* Animação suave ao alternar */
+}
+
+.section.active {
+  transform: scale(1.02); /* Leve aumento ao abrir */
+}
+
+.about-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.about-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateX(5px) scale(1.05); /* Leve deslocamento e aumento ao passar o mouse */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.about-button:active {
+  transform: scale(0.98); /* Reduz um pouco o tamanho ao clicar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra mais sutil ao clicar */
+}
